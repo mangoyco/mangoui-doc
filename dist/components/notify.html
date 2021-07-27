@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Notify 通知 | Mango UI</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="基于 Vue 3.0 的PC 端组件库">
+    
+    <link rel="preload" href="/assets/css/0.styles.bf291105.css" as="style"><link rel="preload" href="/assets/js/app.f5796afc.js" as="script"><link rel="preload" href="/assets/js/2.db75404b.js" as="script"><link rel="preload" href="/assets/js/7.feeaa62e.js" as="script"><link rel="preload" href="/assets/js/3.36d05c93.js" as="script"><link rel="prefetch" href="/assets/js/10.04e8c36c.js"><link rel="prefetch" href="/assets/js/11.f500c6de.js"><link rel="prefetch" href="/assets/js/12.db94409d.js"><link rel="prefetch" href="/assets/js/13.d0a2358f.js"><link rel="prefetch" href="/assets/js/14.a3bf60db.js"><link rel="prefetch" href="/assets/js/15.667b55cd.js"><link rel="prefetch" href="/assets/js/16.352d60f2.js"><link rel="prefetch" href="/assets/js/17.180d6371.js"><link rel="prefetch" href="/assets/js/18.838ccf3c.js"><link rel="prefetch" href="/assets/js/19.93ccb7f9.js"><link rel="prefetch" href="/assets/js/20.61cd2ba5.js"><link rel="prefetch" href="/assets/js/4.1ca0d734.js"><link rel="prefetch" href="/assets/js/5.a7c76e7d.js"><link rel="prefetch" href="/assets/js/6.94628225.js"><link rel="prefetch" href="/assets/js/8.6c69ef2d.js"><link rel="prefetch" href="/assets/js/9.ad3e6942.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.bf291105.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Mango UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="https://github.com/mangoyco/mango-ui/issues" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  交流
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/mangoyco/mango-ui" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="https://github.com/mangoyco/mango-ui/issues" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  交流
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/mangoyco/mango-ui" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>入门</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/introduce.html" class="sidebar-link">介绍</a></li><li><a href="/get-started/" class="sidebar-link">快速开始</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/components/button.html" class="sidebar-link">Button 按钮</a></li><li><a href="/components/switch.html" class="sidebar-link">Switch 开关</a></li><li><a href="/components/badge.html" class="sidebar-link">Badge 标记</a></li><li><a href="/components/skeleton.html" class="sidebar-link">Skeleton 骨架屏</a></li><li><a href="/components/backtop.html" class="sidebar-link">Backtop 回到顶部</a></li><li><a href="/components/catalog.html" class="sidebar-link">Catalog 导航精灵</a></li><li><a href="/components/message.html" class="sidebar-link">Message 消息提示</a></li><li><a href="/components/carousel.html" class="sidebar-link">Carousel 轮播</a></li><li><a href="/components/notify.html" aria-current="page" class="active sidebar-link">Notify 通知</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="notify-通知"><a href="#notify-通知" class="header-anchor">#</a> Notify 通知 <span class="badge success" style="vertical-align:top;" data-v-70a85c4e>pass</span> <span class="badge tip" style="vertical-align:top;" data-v-70a85c4e>0.0.5+</span></h1> <h3 id="基础用法"><a href="#基础用法" class="header-anchor">#</a> 基础用法</h3> <p>默认样式以及 <code>type</code> 属性</p> <iframe id="nf-iframe" src="/demo/notify.html"></iframe> <div id="nf-btns"></div> <script>
+  var timer = null
+  var ifr = document.getElementById('nf-iframe')
+  var bts = [
+    {t:'默认',d:{ content:'这是一条默认通知',title:'这是标题' }},
+    {t:'成功',d:{ content:'这是一条成功通知',title:'success',type:'success' }},
+    {t:'警告',d:{ content:'这是一条警告通知',title:'warning',type:'warning' }},
+    {t:'错误',d:{ content:'这是一条错误通知',title:'error',type:'error' }},
+    {t:'info',d:{ content:'这是一条消息通知',title:'info',type:'info' }},
+    // {t:'8秒关闭',d:{ content:'这是一条8秒后关闭的通知',title:'8s后关闭',duration:8000 }},
+    // {t:'间隔',d:{ content:'这是一条顶部间隔60px的通知',title:'间隔',gap:60 }},
+    // {t:'可关闭',d:{ content:'这是一条可以关闭的通知',title:'可关闭',closable:true }},
+    // {t:'其他位置',d:{ content:'这是一条顶部间隔60px的通知',title:'其他位置',closable:true,position:'bottomRight' }},
+  ]
+  var warp = document.getElementById('nf-btns')
+  // debugger
+  bts.forEach(item=&gt;{
+    let btn = document.createElement('button')
+    btn.className = 'mg-button--mini'
+    btn.innerText = item.t
+    btn.addEventListener('click',()=&gt;{
+      ifr.style.display = ''
+      clearTimeout(timer)
+      timer = setTimeout(()=&gt;{
+        ifr.style.display = 'none'
+      },9600)
+      ifr.contentWindow.postMessage(item,location.origin + '/demo/notify.html')
+    })
+    warp.appendChild(btn)
+  })
+</script> <div class="detail-warp"><details open="open"><summary>展开查看</summary> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mg-button</span> <span class="token attr-name">:size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">'</span>mini<span class="token punctuation">'</span><span class="token punctuation">&quot;</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>open1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>默认（info）<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mg-button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mg-button</span> <span class="token attr-name">:size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">'</span>mini<span class="token punctuation">'</span><span class="token punctuation">&quot;</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>open2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>成功<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mg-button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mg-button</span> <span class="token attr-name">:size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">'</span>mini<span class="token punctuation">'</span><span class="token punctuation">&quot;</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>open3<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>警告<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mg-button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mg-button</span> <span class="token attr-name">:size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">'</span>mini<span class="token punctuation">'</span><span class="token punctuation">&quot;</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>open4<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>错误<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mg-button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mg-button</span> <span class="token attr-name">:size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">'</span>mini<span class="token punctuation">'</span><span class="token punctuation">&quot;</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>open5<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>info<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mg-button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token function">open1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$notify</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          title<span class="token operator">:</span><span class="token string">'这是标题'</span><span class="token punctuation">,</span>
+          content<span class="token operator">:</span> <span class="token string">'这是一条默认通知'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function">open2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$notify</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          title<span class="token operator">:</span><span class="token string">'success'</span><span class="token punctuation">,</span>
+          content<span class="token operator">:</span> <span class="token string">'这是一条成功通知'</span><span class="token punctuation">,</span>
+          type<span class="token operator">:</span> <span class="token string">'success'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+      <span class="token function">open3</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$notify</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          title<span class="token operator">:</span><span class="token string">'warning'</span><span class="token punctuation">,</span>
+          content<span class="token operator">:</span> <span class="token string">'这是一条警告通知'</span><span class="token punctuation">,</span>
+          type<span class="token operator">:</span> <span class="token string">'warning'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+      <span class="token function">open4</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$notify</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          title<span class="token operator">:</span> <span class="token string">'error'</span><span class="token punctuation">,</span>
+          content<span class="token operator">:</span> <span class="token string">'这是一条错误通知'</span><span class="token punctuation">,</span>
+          type<span class="token operator">:</span> <span class="token string">'error'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token function">open5</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$notify</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          title<span class="token operator">:</span> <span class="token string">'info'</span><span class="token punctuation">,</span>
+          content<span class="token operator">:</span> <span class="token string">'这是一条消息通知'</span><span class="token punctuation">,</span>
+          type<span class="token operator">:</span> <span class="token string">'info'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></details></div> <h3 id="其他样式"><a href="#其他样式" class="header-anchor">#</a> 其他样式</h3> <p>包括偏移，显示关闭按钮，弹出位置，以及自定义 icon 等<br> <font size="2">相对来说比较见名知意...这里就写在一起了</font></p> <div id="nf-btns-sec"></div> <script>
+  var timer = null
+  var ifr = document.getElementById('nf-iframe')
+  var bts = [
+    {t:'偏移',d:{ content:'这是一条顶部偏移60px的通知',title:'偏移',gap:60 }},
+    {t:'可关闭',d:{ content:'这是一条可以关闭的通知',title:'可关闭',closable:true }},
+    {t:'其他位置',d:{ content:'这是一条位于右下角的通知',title:'其他位置',position:'bottomRight' }},
+    {t:'8秒关闭',d:{ content:'这是一条8秒后关闭的通知',title:'8s后关闭',duration:8000 }},
+    {t:'icon',d:{ content:'这是一条带有自定义icon通知',title:'自定义icon',icon:'&lt;i class=&quot;mg-icon-info&quot;&gt;&lt;/i&gt;' }},
+  ]
+  var warp = document.getElementById('nf-btns-sec')
+  // debugger
+  bts.forEach(item=&gt;{
+    let btn = document.createElement('button')
+    btn.className = 'mg-button--mini'
+    btn.innerText = item.t
+    btn.addEventListener('click',()=&gt;{
+      ifr.style.display = ''
+      clearTimeout(timer)
+      timer = setTimeout(()=&gt;{
+        ifr.style.display = 'none'
+      },9600)
+      ifr.contentWindow.postMessage(item,location.origin + '/demo/notify.html')
+    })
+    warp.appendChild(btn)
+  })
+</script> <div class="detail-warp"><details open="open"><summary>展开查看</summary> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mg-button</span> <span class="token attr-name">:size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">'</span>mini<span class="token punctuation">'</span><span class="token punctuation">&quot;</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>open1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>偏移<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mg-button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mg-button</span> <span class="token attr-name">:size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">'</span>mini<span class="token punctuation">'</span><span class="token punctuation">&quot;</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>open2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>可关闭<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mg-button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mg-button</span> <span class="token attr-name">:size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">'</span>mini<span class="token punctuation">'</span><span class="token punctuation">&quot;</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>open3<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>其他位置<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mg-button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mg-button</span> <span class="token attr-name">:size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">'</span>mini<span class="token punctuation">'</span><span class="token punctuation">&quot;</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>open4<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>8秒关闭<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mg-button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mg-button</span> <span class="token attr-name">:size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">'</span>mini<span class="token punctuation">'</span><span class="token punctuation">&quot;</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>open5<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>icon<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mg-button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token function">open1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$notify</span><span class="token punctuation">(</span><span class="token punctuation">{</span> 
+          content<span class="token operator">:</span><span class="token string">'这是一条顶部偏移60px的通知'</span><span class="token punctuation">,</span>
+          title<span class="token operator">:</span><span class="token string">'偏移'</span><span class="token punctuation">,</span>
+          gap<span class="token operator">:</span><span class="token number">60</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+      <span class="token function">open2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$notify</span><span class="token punctuation">(</span><span class="token punctuation">{</span> 
+          content<span class="token operator">:</span><span class="token string">'这是一条可以关闭的通知'</span><span class="token punctuation">,</span>
+          title<span class="token operator">:</span><span class="token string">'可关闭'</span><span class="token punctuation">,</span>
+          closable<span class="token operator">:</span><span class="token boolean">true</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+      <span class="token function">open3</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$notify</span><span class="token punctuation">(</span><span class="token punctuation">{</span> 
+          content<span class="token operator">:</span><span class="token string">'这是一条位于右下角的通知'</span><span class="token punctuation">,</span>
+          title<span class="token operator">:</span><span class="token string">'其他位置'</span><span class="token punctuation">,</span>
+          position<span class="token operator">:</span><span class="token string">'bottomRight'</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+      <span class="token function">open4</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$notify</span><span class="token punctuation">(</span><span class="token punctuation">{</span> 
+          content<span class="token operator">:</span><span class="token string">'这是一条8秒后关闭的通知'</span><span class="token punctuation">,</span>
+          title<span class="token operator">:</span><span class="token string">'8s后关闭'</span><span class="token punctuation">,</span>
+          duration<span class="token operator">:</span><span class="token number">8000</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token function">open5</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$notify</span><span class="token punctuation">(</span><span class="token punctuation">{</span> 
+          content<span class="token operator">:</span><span class="token string">'这是一条带有自定义icon通知'</span><span class="token punctuation">,</span>
+          title<span class="token operator">:</span><span class="token string">'自定义icon'</span><span class="token punctuation">,</span>
+          icon<span class="token operator">:</span><span class="token string">'&lt;i class=&quot;mg-icon-info&quot;&gt;&lt;/i&gt;'</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></details></div> <div class="custom-block tip"><p class="custom-block-title">提示</p> <p>使用 <code>icon</code> 属性时也可以配合 <code>type</code> 属性，或者行间样式实现不同颜色的 icon</p></div> <h3 id="notify-attributes"><a href="#notify-attributes" class="header-anchor">#</a> Notify Attributes</h3> <table class="attr-table"><thead><tr><th>参数</th> <th>说明</th> <th>类型</th> <th>可选值</th> <th>默认值</th></tr></thead> <tbody><tr><td>title</td> <td>通知的标题</td> <td>string</td> <td>-</td> <td>-</td></tr> <tr><td>content</td> <td>通知的内容</td> <td>string</td> <td>-</td> <td>-</td></tr> <tr><td>position</td> <td>位置</td> <td>topLeft/topRight/bottomLeft/bottomRight'</td> <td>-</td> <td>topRight</td></tr> <tr><td>type</td> <td>类型</td> <td>success/warning/error/info</td> <td>-</td> <td>-</td></tr> <tr><td>icon</td> <td>图标</td> <td>string</td> <td>-</td> <td>-</td></tr> <tr><td>duration</td> <td>持续时间，ms</td> <td>number</td> <td>-</td> <td>3500</td></tr> <tr><td>gap</td> <td>偏移量，px</td> <td>number</td> <td>-</td> <td>-</td></tr></tbody></table> <h3 id="notify-event"><a href="#notify-event" class="header-anchor">#</a> Notify Event</h3> <table class="attr-table"><thead><tr><th>事件</th> <th>说明</th> <th>回参</th></tr></thead> <tbody><tr><td>onClose</td> <td>通知关闭时触发</td> <td>-</td></tr></tbody></table></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/components/carousel.html" class="prev">
+        Carousel 轮播
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.f5796afc.js" defer></script><script src="/assets/js/2.db75404b.js" defer></script><script src="/assets/js/7.feeaa62e.js" defer></script><script src="/assets/js/3.36d05c93.js" defer></script>
+  </body>
+</html>

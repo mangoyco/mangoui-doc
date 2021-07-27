@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./mangoui.css">
+  <style>
+    #app{
+      width: 96%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .mg-carousel-item:nth-of-type(odd) .item{
+      background-color: #8ac007;
+    }
+    .mg-carousel-item:nth-of-type(even) .item{
+      background-color: #3eaf7c;
+    }
+    .item{
+      height: 180px;
+    }
+    .first{
+      width: 42%;
+      display: inline-block;
+      margin-right: 15px;
+    }
+    .line{
+      height: 180px;
+      display: inline-block;
+      border-left: 1px solid #666;
+      margin-right: 15px;
+      vertical-align: top;
+    }
+    .sec{
+      width: 42%;
+      display: inline-block;
+    }
+    .narrow{
+      width: 95%;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="./vue.global.min.js"></script>
+  <script src="./mangoui.umd.js"></script>
+  <div id="app">
+    <template v-if="hash === ''">
+      <div class="first">
+        <mg-carousel :dot='true' :height="'180px'">
+          <mg-carousel-item v-for="i in 4">
+            <div class="item">{{i}}</div>
+          </mg-carousel-item>
+        </mg-carousel>
+      </div>
+      <div class="line"></div>
+      <div class="sec">
+        <mg-carousel :dot='true' :height="'180px'" :dot-position="'right'" :direction="'vertical'"
+          :dot-trigger="'hover'">
+          <mg-carousel-item v-for="i in 4">
+            <div class="item">{{i}}</div>
+          </mg-carousel-item>
+        </mg-carousel>
+      </div>
+    </template>
+
+    <template v-if="hash === 'arrow'">
+      <mg-carousel :arrow="'hover'" :infinity="true" :height="'180px'">
+        <mg-carousel-item v-for="i in 4">
+          <div class="item">{{i}}</div>
+        </mg-carousel-item>
+      </mg-carousel>
+    </template>
+
+    <template v-if="hash === 'card'">
+      <mg-carousel class="narrow" :type="'card'" :arrow="'always'" :duration="800" :infinity="true" :height="'180px'">
+        <mg-carousel-item v-for="i in 4">
+          <div class="item" :style="{backgroundColor:colors[i - 1]}">{{i}}</div>
+        </mg-carousel-item>
+      </mg-carousel>
+    </template>
+
+    <template v-if="hash === 'fade'">
+      <mg-carousel :arrow="'always'" :animate="'fade'" :height="'180px'">
+        <mg-carousel-item v-for="i in 4">
+          <div class="item" :style="{backgroundColor:colors[i - 1]}">{{i}}</div>
+        </mg-carousel-item>
+      </mg-carousel>
+    </template>
+  </div>
+
+  <script>
+    const App = {
+      created() {
+        this.hash = location.hash.replace('#', '')
+      },
+      data() {
+        return {
+          hash: '',
+          colors:['#8ac007','#3eaf7c','#e7c000','#859bff']
+        }
+      },
+    }
+    const app = Vue.createApp(App).use(mangoui.default).mount('#app')
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./mangoui.css">
+</head>
+
+<body>
+  <script>
+    document = window.parent.document
+    console.log(window.parent.document.title)
+  </script>
+  <script src="./vue.global.min.js"></script>
+  <script src="./mangoui.umd.js"></script>
+  <div id="app">
+    <!-- <div id="article" :class="hash === 'position' ? 'goRight' : ''"> -->
+      <h1>Mango Catalog</h1>
+      <p>Guides: How to use MangoUI</p>
+      <h2>1. Create a project</h2>
+      <p>install Mango.</p>
+      <p>install Mango.</p>
+      <p>install Mango.</p>
+      <p>install Mango.</p>
+      <p>install Mango.</p>
+      <h2>2. Installation</h2>
+      <p>import css & js.</p>
+      <p>import css & js.</p>
+      <p>import css & js.</p>
+      <p>import css & js.</p>
+      <p>import css & js.</p>
+      <p>import css & js.</p>
+      <h2>3. Normal Vue3</h2>
+      <p>start use htmlTags startwith mg-.</p>
+      <p>start use htmlTags startwith mg-.</p>
+      <p>start use htmlTags startwith mg-.</p>
+      <p>start use htmlTags startwith mg-.</p>
+      <p>start use htmlTags startwith mg-.</p>
+      <p>start use htmlTags startwith mg-.</p>
+      <h2>4. Sorry , wo bian bu chu lai le</h2>
+      <p>nomre.</p>
+      <p>nomre.</p>
+      <p>nomre.</p>
+      <p>nomre.</p>
+      <p>nomre.</p>
+      <p>nomre.</p>
+      <p>nomre.</p>
+      <p>nomre.</p>
+      <p>nomre.</p>
+      <p>nomre.</p>
+      <p>nomre.</p>
+      <p>nomre.</p>
+      <h1>MangoUI Author</h1>
+      <h2>Introduction</h2>
+      <p>mangoyco.</p>
+      <h2>More &amp; Rules</h2>
+      <h3>For Study</h3>
+      <p>Mango.</p>
+      <h3>Who's using This</h3>
+      <p>In my self project.</p>
+      <h3>Who's using This</h3>
+    <!-- </div> -->
+    <mg-backtop></mg-backtop>
+    <mg-backtop :visible-top="200" :bottom="80">
+      <span>go</span>
+    </mg-backtop>
+  </div>
+  </div>
+  <script>
+    const App = {
+      created() {
+        this.hash = location.hash.replace('#', '')
+      },
+      data() {
+        return {
+          hash: '',
+        }
+      },
+    }
+    const app = Vue.createApp(App).use(mangoui.default).mount('#app')
+  </script>
+</body>
+
+</html>

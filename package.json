@@ -1,0 +1,15 @@
+{
+  "name": "mango-ui-doc",
+  "version": "1.0.0",
+  "description": "docs page for mango-ui-vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "docs",
+    "mango-ui",
+    "vue3"
+  ],
+  "author": "mangoyco",
+  "license": "ISC"
+}
