@@ -41,6 +41,9 @@
       },
       methods:{
         nf(d){
+          if(d.icon){
+            d.icon = `<i class="mg-icon-info"></i>`
+          }
           this.$notify(d)
         }
       }
