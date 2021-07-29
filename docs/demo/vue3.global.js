@@ -726,7 +726,7 @@ var Vue3 = function (d) {
       vnode: e
     }) => `at <${Ni(n,e.type)}>`).join("\n"), o]);
     else {
-      const i = [`[Vue warn]: ${e}`, ...t];
+      const i = [`[Vue3 warn]: ${e}`, ...t];
       o.length && i.push("\n", ... function (e) {
         const r = [];
         return e.forEach((e, t) => {
@@ -777,7 +777,7 @@ var Vue3 = function (d) {
     11: "app warnHandler",
     12: "ref function",
     13: "async component loader",
-    14: "scheduler flush. This is likely a Vue internals bug. Please open an issue at https://new-issue.vuejs.org/?repo=vuejs/vue-next"
+    14: "scheduler flush. This is likely a Vue3 internals bug. Please open an issue at https://new-issue.vuejs.org/?repo=vuejs/vue-next"
   };
 
   function Ft(e, t, n, r) {
@@ -945,7 +945,7 @@ var Vue3 = function (d) {
   const un = new Map;
 
   function pn(e, t) {
-    return t || (At("HMR API usage is out of date.\nPlease upgrade vue-loader/vite/rollup-plugin-vue or other relevant dependency that handles Vue SFC compilation."), t = {}), !un.has(e) && (un.set(e, {
+    return t || (At("HMR API usage is out of date.\nPlease upgrade vue-loader/vite/rollup-plugin-vue or other relevant dependency that handles Vue3 SFC compilation."), t = {}), !un.has(e) && (un.set(e, {
       component: Oi(t) ? t.__vccOpts : t,
       instances: new Set
     }), !0)
@@ -956,7 +956,7 @@ var Vue3 = function (d) {
       try {
         return n(e, t)
       } catch (e) {
-        console.error(e), console.warn("[HMR] Something went wrong during Vue component hot-reload. Full reload required.")
+        console.error(e), console.warn("[HMR] Something went wrong during Vue3 component hot-reload. Full reload required.")
       }
     }
   }
@@ -2754,7 +2754,7 @@ var Vue3 = function (d) {
               var o = Object.keys(e.directives);
               for (let e = 0; e < o.length; e++) ro(o[e])
             }
-            e.compilerOptions && _i() && At('"compilerOptions" is only supported when using a build of Vue that includes the runtime compiler. Since you are using a runtime-only build, the options should be passed via your build tool config instead.');
+            e.compilerOptions && _i() && At('"compilerOptions" is only supported when using a build of Vue3 that includes the runtime compiler. Since you are using a runtime-only build, the options should be passed via your build tool config instead.');
             t.accessCache = Object.create(null), t.proxy = vt(new Proxy(t.ctx, li)),
               function (t) {
                 const {
@@ -3144,7 +3144,7 @@ var Vue3 = function (d) {
       if (ne(n)) {
         if (t) {
           t = t(n);
-          return t || At(`Failed to locate Teleport target with selector "${n}". ` + "Note the target element must exist before the component is mounted - i.e. the target cannot be rendered by the component itself, and ideally should be outside of the entire Vue component tree."), t
+          return t || At(`Failed to locate Teleport target with selector "${n}". ` + "Note the target element must exist before the component is mounted - i.e. the target cannot be rendered by the component itself, and ideally should be outside of the entire Vue3 component tree."), t
         }
         return At("Current renderer does not support string target for Teleports. (missing querySelector renderer option)"), null
       }
@@ -3304,7 +3304,7 @@ var Vue3 = function (d) {
         e && !ne(e) && (n.class = a(e)), re(t) && (ht(t) && !ee(t) && (t = Z({}, t)), n.style = l(t))
       }
       s = ne(e) ? 1 : e.__isSuspense ? 128 : e.__isTeleport ? 64 : re(e) ? 4 : te(e) ? 2 : 0;
-      4 & s && ht(e) && At("Vue received a Component which was made a reactive object. This can lead to unnecessary performance overhead, and should be avoided by marking the component with `markRaw` or using `shallowRef` instead of `ref`.", "\nComponent that was made reactive: ", e = mt(e));
+      4 & s && ht(e) && At("Vue3 received a Component which was made a reactive object. This can lead to unnecessary performance overhead, and should be avoided by marking the component with `markRaw` or using `shallowRef` instead of `ref`.", "\nComponent that was made reactive: ", e = mt(e));
       o = {
         __v_isVNode: !0,
         __v_skip: !0,
@@ -3518,7 +3518,7 @@ var Vue3 = function (d) {
       },
       has(e, t) {
         var n = "_" !== t[0] && !r(t);
-        return !n && li.has(e, t) && At(`Property ${JSON.stringify(t)} should not start with _ which is a reserved prefix for Vue internals.`), n
+        return !n && li.has(e, t) && At(`Property ${JSON.stringify(t)} should not start with _ which is a reserved prefix for Vue3 internals.`), n
       }
     });
   const ci = io();
@@ -3552,7 +3552,7 @@ var Vue3 = function (d) {
           configurable: !0,
           get: () => n[e],
           set: X
-        }) : At(`setup() return property ${JSON.stringify(e)} should not start with "$" or "_" ` + "which are reserved prefixes for Vue internals.")
+        }) : At(`setup() return property ${JSON.stringify(e)} should not start with "$" or "_" ` + "which are reserved prefixes for Vue3 internals.")
       })
     }(e)) : void 0 !== t && At(`setup() should return an object. Received: ${null===t?"null":typeof t}`), wi(e, n)
   }
@@ -3575,7 +3575,7 @@ var Vue3 = function (d) {
     } = n, l = Z(Z({
       isCustomElement: o,
       delimiters: s
-    }, i), l), n.render = bi(r, l), vo(e, "compile")), e.render = n.render || X, e.render._rc && (e.withProxy = new Proxy(e.ctx, ai))), pi = e, he(), Ir(e), me(), pi = null, n.render || e.render !== X || t || (!bi && n.template ? At('Component provided template option but runtime compilation is not supported in this build of Vue. Use "vue.global.js" instead.') : At("Component is missing template or render function."))
+    }, i), l), n.render = bi(r, l), vo(e, "compile")), e.render = n.render || X, e.render._rc && (e.withProxy = new Proxy(e.ctx, ai))), pi = e, he(), Ir(e), me(), pi = null, n.render || e.render !== X || t || (!bi && n.template ? At('Component provided template option but runtime compilation is not supported in this build of Vue3. Use "vue.global.js" instead.') : At("Component is missing template or render function."))
   }
   const Si = {
     get: (e, t) => (En(), e[t]),
@@ -4456,7 +4456,7 @@ var Vue3 = function (d) {
         }
       });
       const n = e.config.compilerOptions,
-        r = 'The `compilerOptions` config option is only respected when using a build of Vue.js that includes the runtime compiler (aka "full build"). Since you are using the runtime-only build, `compilerOptions` must be passed to `@vue/compiler-dom` in the build setup instead.\n- For vue-loader: pass it via vue-loader\'s `compilerOptions` loader option.\n- For vue-cli: see https://cli.vuejs.org/guide/webpack.html#modifying-options-of-a-loader\n- For vite: pass it via @vitejs/plugin-vue options. See https://github.com/vitejs/vite/tree/main/packages/plugin-vue#example-for-passing-options-to-vuecompiler-dom';
+        r = 'The `compilerOptions` config option is only respected when using a build of Vue3.js that includes the runtime compiler (aka "full build"). Since you are using the runtime-only build, `compilerOptions` must be passed to `@vue/compiler-dom` in the build setup instead.\n- For vue-loader: pass it via vue-loader\'s `compilerOptions` loader option.\n- For vue-cli: see https://cli.vuejs.org/guide/webpack.html#modifying-options-of-a-loader\n- For vite: pass it via @vitejs/plugin-vue options. See https://github.com/vitejs/vite/tree/main/packages/plugin-vue#example-for-passing-options-to-vuecompiler-dom';
       Object.defineProperty(e.config, "compilerOptions", {
         get() {
           return At(r), n
@@ -4481,7 +4481,7 @@ var Vue3 = function (d) {
   }
 
   function Js(e) {
-    console.warn(`[Vue warn] ${e.message}`)
+    console.warn(`[Vue3 warn] ${e.message}`)
   }
 
   function qs(e, t, n, r) {
@@ -5559,7 +5559,7 @@ var Vue3 = function (d) {
       filename: o = "template.vue.html",
       scopeId: i = null,
       optimizeImports: s = !1,
-      runtimeGlobalName: l = "Vue",
+      runtimeGlobalName: l = "Vue3",
       runtimeModuleName: a = "vue",
       ssr: c = !1
     }) {
@@ -6747,7 +6747,7 @@ var Vue3 = function (d) {
         }
       }
     };
-  console.info("You are running a development build of Vue.\nMake sure to use the production build (*.prod.js) when deploying for production."), Fi();
+  console.info("You are running a development build of Vue3.\nMake sure to use the production build (*.prod.js) when deploying for production."), Fi();
   const Gc = Object.create(null);
 
   function Jc(n, e) {
