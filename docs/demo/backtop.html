@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./mangoui.css">
+  <link rel="stylesheet" href="./common/mangoui.css">
 </head>
 
 <body>
@@ -14,8 +14,8 @@
     document = window.parent.document
     console.log(window.parent.document.title)
   </script>
-  <script src="./vue.global.min.js"></script>
-  <script src="./mangoui.umd.js"></script>
+  <script src="./common/vue.global.min.js"></script>
+  <script src="./common/backtop.js"></script>
   <div id="app">
     <!-- <div id="article" :class="hash === 'position' ? 'goRight' : ''"> -->
       <h1>Mango Catalog</h1>
@@ -80,7 +80,7 @@
         }
       },
     }
-    const app = Vue.createApp(App).use(mangoui.default).mount('#app')
+    const app = Vue.createApp(App).use(n).mount('#app')
   </script>
 </body>
 

@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./mangoui.css">
+  <link rel="stylesheet" href="./common/mangoui.css">
   <style>
     body{
       padding-top: 8px;
@@ -16,8 +16,12 @@
   </style>
 </head>
 <body>
-  <script src="./vue.global.min.js"></script>
-  <script src="./mangoui.umd.js"></script>
+  <script src="./common/vue.global.min.js"></script>
+  <script src="./common/badge.js"></script>
+  <script>
+    window._badge = n
+  </script>
+  <script src="./common/button.js"></script>
   <div id="app">
     <div v-if="hash === ''">
       <mg-badge :value="12">
@@ -73,7 +77,7 @@
         }
        },
      }
-     const app = Vue.createApp(App).use(mangoui.default).mount('#app')
+     const app = Vue.createApp(App).use(_badge).use(n).mount('#app')
    </script>
 </body>
 </html>
