@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./common/mangoui.css">
+  <style>
+    html,body{
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
   <script src="./common/vue.global.min.js"></script>
@@ -35,7 +40,6 @@
         window.addEventListener('message',(e)=>{
           const data = e.data
           this.ifrId = data.ifrId
-          console.log(data)
           if(data.prop){
             this[data.prop] = true
           }else{
@@ -49,14 +53,16 @@
           hash: '',
           position:'left',
           show:false,
-          positions:['left','right','top','bottom'],
           outerShow:false,
           innerShow:false
         }
       },
       methods:{
         closed(){
-          window.parent.hideiframe(this.ifrId)
+          console.log('closed')
+          setTimeout(()=>{
+            window.parent.hideiframe()
+          },150)
         }
       }
     }
