@@ -36,6 +36,14 @@
   <script>
     const App = {
       created() {
+        document.body.addEventListener('click',(e)=>{
+          console.log(e)
+          if(e.target === document.body){
+            window.parent.hideiframe()
+          }
+        })
+
+
         this.hash = location.hash.replace('#', '')
         window.addEventListener('message',(e)=>{
           const data = e.data
