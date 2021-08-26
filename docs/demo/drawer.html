@@ -9,5 +9,58 @@
 </head>
 <body>
   <script src="./common/vue.global.min.js"></script>
+  <script src="./common/mangoui.umd.js"></script>
+  <div id="app">
+    <mg-drawer v-model="show" :position="position" @closed="closed">
+      <span style="padding-left: 12px;">我的 position 属性值为 {{ position }}</span>
+    </mg-drawer>
+
+    <mg-drawer v-model="outerShow" :width="'700px'" :title="'我是外层的标题'" :position="'right'" @closed="closed">
+      <span>我是外层的内容</span>
+      <mg-button @click="innerShow = true" :size="'mini'">打开内层</mg-button>
+    </mg-drawer>
+
+    <mg-drawer v-model="innerShow" :position="'right'" :modal-closable="false">
+      <template v-slot:title>
+        <h1 style="color: #0080FF;">我是内层的标题</h1>
+      </template>
+      <span>我会忽略蒙层点击</span>
+      <mg-button @click="innerShow = false">点我关闭</mg-button>
+    </mg-drawer>
+  </div>
+  <script>
+    const App = {
+      created() {
+        this.hash = location.hash.replace('#', '')
+        window.addEventListener('message',(e)=>{
+          const data = e.data
+          this.ifrId = data.ifrId
+          console.log(data)
+          if(data.prop){
+            this[data.prop] = true
+          }else{
+            this.position = data.p
+            this.show = true
+          }
+        },false)
+      },
+      data() {
+        return {
+          hash: '',
+          position:'left',
+          show:false,
+          positions:['left','right','top','bottom'],
+          outerShow:false,
+          innerShow:false
+        }
+      },
+      methods:{
+        closed(){
+          window.parent.hideiframe(this.ifrId)
+        }
+      }
+    }
+    const app = Vue.createApp(App).use(mangoui.default).mount('#app')
+  </script>
 </body>
 </html>

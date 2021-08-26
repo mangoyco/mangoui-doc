@@ -20,9 +20,9 @@
     var document = window.parent.document
     const App = {
       created() {
-        window.addEventListener('message',(e)=>{
+        window.addEventListener('message', (e) => {
           this.nf(e.data.d)
-        },false)
+        }, false)
         this.hash = location.hash.replace('#', '')
       },
       data() {
@@ -30,9 +30,9 @@
           hash: '',
         }
       },
-      methods:{
-        nf(d){
-          if(d.icon){
+      methods: {
+        nf(d) {
+          if (d.icon) {
             d.icon = `<i class="mg-icon-info"></i>`
           }
           this.$notify(d)
