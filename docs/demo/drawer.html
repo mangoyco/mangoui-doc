@@ -16,6 +16,7 @@
   <script src="./common/vue.global.min.js"></script>
   <script src="./common/mangoui.umd.js"></script>
   <div id="app">
+    <button @click="show = true">1</button>
     <mg-drawer v-model="show" :position="position" @closed="closed">
       <span style="padding-left: 12px;">我的 position 属性值为 {{ position }}</span>
     </mg-drawer>
@@ -37,7 +38,6 @@
     const App = {
       created() {
         document.body.addEventListener('click',(e)=>{
-          console.log(e)
           if(e.target === document.body){
             window.parent.hideiframe()
           }

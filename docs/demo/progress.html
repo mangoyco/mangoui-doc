@@ -7,17 +7,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./common/mangoui.css">
+  <style>
+    .progress-warp{
+      display: grid;
+      grid-row-gap: 7px;
+      width: 50%;
+    }
+    .mg-progress-dashboard{
+      margin-right: 5px;
+    }
+  </style>
 </head>
 
 <body>
   <script src="./common/vue.global.min.js"></script>
-  <script src="./common/notify.js"></script>
+  <script src="./common/button.js"></script>
+  <script>
+    var _mgbtn = n
+  </script>
+  <script src="./common/progress.js"></script>
   <div id="app">
+    <template v-if="hash === ''">
+      <div class="progress-warp">
+        <mg-progress :percentage="40"></mg-progress>
+        <mg-progress :percentage="100" :status="'success'"></mg-progress>
+        <mg-progress :percentage="40" :status="'warning'"></mg-progress>
+        <mg-progress :percentage="40" :status="'error'"></mg-progress>
+        <mg-progress :percentage="100" :stroke-color="'#42b983'" :status-format="fomat"></mg-progress>
+      </div>
+    </template>
+    <template v-if="hash === 'inside'">
+      <div class="progress-warp">
+        <mg-progress :percentage="40" :stroke-width="'6px'"></mg-progress>
+        <mg-progress :percentage="60" :text-inside="true"></mg-progress>
+        <mg-progress :percentage="100" :stroke-width="'20px'" :text-inside="true"></mg-progress>
+      </div>
+    </template>
+
+    <template v-if="hash === 'circle'">
+      <mg-progress :percentage="20" :type="'circle'"></mg-progress>
+      <mg-progress :percentage="40" :type="'circle'" :status-format="fomat"></mg-progress>
+      <mg-progress :percentage="60" :type="'circle'" :status="'warning'"></mg-progress>
+      <mg-progress :percentage="80" :type="'circle'" :status="'error'"></mg-progress>
+      <mg-progress :percentage="100" :type="'circle'" :status="'success'"></mg-progress>
+    </template>
+
+    <template v-if="hash === 'dashboard'">
+      <mg-progress :percentage="20" :type="'dashboard'"></mg-progress>
+      <mg-progress :percentage="40" :type="'dashboard'" :status-format="fomat"></mg-progress>
+      <mg-progress :percentage="60" :type="'dashboard'" :status="'warning'"></mg-progress>
+      <mg-progress :percentage="80" :type="'dashboard'" :status="'error'"></mg-progress>
+      <mg-progress :percentage="100" :type="'dashboard'" :status="'success'"></mg-progress>
+    </template>
+
+    <template v-if="hash === 'colors'">
+      <div style="width: 50%;margin-bottom: 25px;">
+        <mg-progress :stroke-color="colors" :percentage="percentage"></mg-progress>
+      </div>
+
+      <div style="width: 50%;margin-bottom: 25px;">
+        <mg-progress :stroke-color="colors" active :percentage="percentage"></mg-progress>
+      </div>
+
+      <mg-progress :stroke-color="colors" :percentage="percentage" :type="'circle'" :status-format="fomat">
+      </mg-progress>
+      <mg-progress :stroke-color="colors" :percentage="percentage" :type="'dashboard'" :status-format="fomat">
+      </mg-progress>
+      <br>
+      <mg-button @click="percentage -= 10">-</mg-button>
+      <mg-button @click="percentage += 10">+</mg-button>
+    </template>
   </div>
 
   <script>
-    var window = window.parent
-    var document = window.parent.document
     const App = {
       created() {
         window.addEventListener('message', (e) => {
@@ -27,19 +89,25 @@
       },
       data() {
         return {
+          percentage:20,
+          colors:{
+            from:'#50d4ab',
+            to:'#5e7ce0',
+          },
           hash: '',
         }
       },
       methods: {
-        nf(d) {
-          if (d.icon) {
-            d.icon = `<i class="mg-icon-info"></i>`
+        fomat(p){
+          if(p === 100){
+            return '完成'
+          }else{
+            return p + '%'
           }
-          this.$notify(d)
         }
       }
     }
-    const app = Vue.createApp(App).use(n).mount('#app')
+    const app = Vue.createApp(App).use(_mgbtn).use(n).mount('#app')
   </script>
 </body>
 
