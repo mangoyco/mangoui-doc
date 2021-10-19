@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./common/mangoui.css">
+</head>
+
+<body>
+  <script src="./common/vue.global.min.js"></script>
+  <script src="./common/img-preview.js"></script>
+  <div id="app">
+    <mg-img-preview @closed="closed" :ops="ops" id="pimg" style="position: fixed;display: none;" src="../img/mango.png"
+      alt="" title="点击预览" />
+  </div>
+  <script>
+    document.body.addEventListener('mousewheel', (e) => {
+      e.preventDefault()
+      e.stopPropagation();
+    }, {
+      passive: false
+    })
+    const App = {
+      created() {
+        this.hash = location.hash.replace('#', '')
+        window.addEventListener('message', (e) => {
+          const data = e.data
+          if (e.data.ops) {
+            this.ops = true
+            this.$nextTick(() => {
+              const pimg = document.getElementById('pimg')
+              pimg.style.top = data.top + 'px'
+              pimg.style.left = data.left + 'px'
+              pimg.style.display = ''
+              this.$nextTick(() => {
+                pimg.click()
+              })
+            })
+          } else {
+            const pimg = document.getElementById('pimg')
+            pimg.style.top = data.top + 'px'
+            pimg.style.left = data.left + 'px'
+            pimg.style.display = ''
+            this.$nextTick(() => {
+              pimg.click()
+            })
+          }
+        }, false)
+      },
+      data() {
+        return {
+          hash: '',
+          ops: false,
+          style: {
+            position: 'fixed',
+            top: 10,
+            left: 10
+          }
+        }
+      },
+      methods: {
+        closed() {
+          window.parent.hideiframe()
+        }
+      }
+    }
+    const app = Vue.createApp(App).use(n).mount('#app')
+  </script>
+</body>
+
+</html>
