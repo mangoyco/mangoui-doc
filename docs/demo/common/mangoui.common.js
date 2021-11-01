@@ -4266,8 +4266,9 @@ function popup_modalClose() {
   } else {
     popupManager.zIndex -= 2;
     dom_transitionend(modal, function () {
-      document.body.removeChild(modal);
+      var body = document.body;
       popupManager.appended = false;
+      modal.parentElement === body ? document.body.removeChild(modal) : null;
     });
     document.body.style.overflow = '';
     modalShowToggle();
