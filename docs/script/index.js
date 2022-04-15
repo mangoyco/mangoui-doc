@@ -1,16 +1,5 @@
 console.log(decodeURI('%E6%89%A7%E8%A1%8C%25c%20dhrs()%20%25c%E6%8E%88%E6%9D%83%E5%90%8E%E5%B0%86%E6%AF%8F%E4%B8%AA%E5%B0%8F%E6%97%B6%E6%8F%90%E9%86%92%E6%82%A8%E5%96%9D%E5%96%9D%E6%B0%B4'), "color: #1890ff;", '');
 
-function g_throttle(fn, wait = 1000) {
-  let s = 0
-  return function (...arg) {
-    let now = Date.now()
-    if (now - s > wait) {
-      s = now
-      fn.apply(this, arg)
-    }
-  }
-}
-
 var g_shouldNf = false
 var g_isFirstNf = true
 var g_nfContent = ''
